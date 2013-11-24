@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.eclipse.jdt.ui.preferences.AppearancePreferencePage"
+            class="cho.abbrprojectname.preferences.PreferencePage"
+            id="cho.abbrprojectname.preferences.AbbrPreferencePage"
+            name="Abbreviate Project Names in Package Explorer">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="cho.abbrprojectname.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="cho.AbbrProjectName.viewContribution1"
+            targetID="org.eclipse.jdt.ui.PackageExplorer">
+         <action
+               class="cho.abbrprojectname.ToggleAbbrProjectNamesDelegate"
+               definitionId="cho.AbbrProjectName.command1"
+               icon="icons/abbr.gif"
+               id="cho.AbbrProjectName.action1"
+               label="Abbreviate Project Names"
+               style="toggle"
+               toolbarPath="Abbr">
+         </action>
+      </viewContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="cho.AbbrProjectName.command1"
+            name="Toggle Abbreviate Project Names">
+      </command>
+   </extension>
+
+</plugin>

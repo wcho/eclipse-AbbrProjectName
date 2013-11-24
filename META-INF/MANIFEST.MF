@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Abbreviate Project Names
+Bundle-SymbolicName: cho.AbbrProjectName;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: cho.abbrprojectname.AbbrProjectNameActivator
+Require-Bundle: org.eclipse.core.resources,
+ org.eclipse.jdt.ui,
+ org.eclipse.jdt.core,
+ org.eclipse.help.ui;bundle-version="3.5.101"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Wooyoung Cho
